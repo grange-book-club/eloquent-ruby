@@ -1,0 +1,30 @@
+# To Run Tests:
+
+cd C:\bookclub\eloquent_ruby\chapter14
+rspec spec
+rspec spec --format html > TestResults_output.html
+
+Open your terminal, cd into the project directory, and run rspec spec. 
+The spec is the folder in which rspec will find the tests. 
+You should see output saying something about “uninitialized constant 
+
+C:\Users\c-slabom>rspec C:\bookclub\eloquent_ruby\chapter14\   spec\ch14_spec.rb
+
+C:\Users\c-slabom>rspec C:\bookclub\eloquent_ruby\chapter14\spec\ch14_spec.rb
+
+example: rspec spec/bowling_spec.rb 
+
+C:\bookclub\eloquent_ruby\chapter14>rspec ch14.rb
+
+C:\Users\c-slabom>rspec C:\bookclub\eloquent_ruby\chapter14\spec
+
+=
+spec --format html:output.html watir_with_rspec.rb
+
+???
+xxxxx> rspec --format html:output.html watir_with_rspec.rb
+
+rspec <path_to_spec_file> --format html
+rspec spec --format html
+
+rspec spec --format html > TestResults_output.html
