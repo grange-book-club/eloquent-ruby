@@ -5,8 +5,23 @@ class Cooler
   attr_accessor :meats
 
   def beer_count
-    beer_count = 0
-    self.beverages.each { |bev| (beer_count+=1) if (bev[:type] == :beer) }
-    beer_count
+    self.beers.size
+  end
+
+  def unwind
+    
+  end
+
+  def beers
+    self.beverages.select{|bev| bev[:type] == :beer}
+  end
+
+  def each_beer
+    index = 0
+    beers = self.beers
+    while index < self.beer_count
+      yield(beers[index])
+      index += 1
+    end
   end
 end
