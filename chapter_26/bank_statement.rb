@@ -4,29 +4,36 @@ class StructuredDocument
   end
 
   def self.privatize
-    private :content
+    private :balance
 
     def self.disclaimer
       "This document is private."
     end
   end
+
+  def balance
+    1000000
+  end
 end
 
 
 class BankStatement < StructuredDocument
-
   privatize
-
 end
 
 
 class PublicBankStatement < StructuredDocument
-
 end
 
-private_statement = BankStatement.new
-puts private_statement.disclaimer
-
+puts "=== Working with a PublicBankStatement ==="
 
 public_statement = PublicBankStatement.new
-puts public_statement.disclaimer
+puts PublicBankStatement.disclaimer
+puts public_statement.balance
+
+puts "=== Working with a PrivateBankStatement ==="
+
+private_statement = BankStatement.new
+puts BankStatement.disclaimer
+puts private_statement.balance
+
