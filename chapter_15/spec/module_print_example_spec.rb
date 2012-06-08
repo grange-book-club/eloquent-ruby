@@ -31,6 +31,7 @@ describe ModulePrintExample do
     message.should == "No Method error"
   end
 
+
   it 'should use a module method without it being included into a class' do
     ModulePrintExample::print_module_method.should == 'This is a module method'
   end
